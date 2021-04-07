@@ -17,7 +17,7 @@ If  you want to run against a file that exists on the web
 docker run -v ${PWD}:/data -it --rm copyttree:latest root://eospublic.cern.ch//eos/opendata/cms/MonteCarlo2011/Summer11LegDR/SMHiggsToZZTo4L_M-125_7TeV-powheg15-JHUgenV3-pythia6/AODSIM/PU_S13_START53_LV6-v1/20000/0C74CD5B-4C92-E411-AC34-E0CB4E29C4F7.root
 ```
 
-Running on a local file (note the file: as part of the input):
+Running on a local file (note the `file:` as part of the input):
 
 ```bash
 docker run -v ${PWD}:/data -it --rm copyttree:latest file:/data/trimmed_file_numEvent10.root
@@ -25,10 +25,13 @@ docker run -v ${PWD}:/data -it --rm copyttree:latest file:/data/trimmed_file_num
 
 Command Line Options:
 
+- `-n <nevents>` - Defaults to 10. How many events to copy.
+- `-o <output-file-name-stem>` - The output filename stem. Not the CMS framework will alter the name - but it will start with this.
+
+All arguments must be specified before the input filename.
+
 ```bash
 docker run -v ${PWD}:/data -it --rm copyttree:latest -?
-Setting up CMSSW_5_3_32
-CMSSW should now be available.
 Usage cmd [-n <nevents>] [-o <output-file-name-stem>] input-file
 ```
 
