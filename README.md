@@ -26,7 +26,7 @@ docker run -v ${PWD}:/data -it --rm copyttree:latest file:/data/trimmed_file_num
 Command Line Options:
 
 - `-n <nevents>` - Defaults to 10. How many events to copy.
-- `-o <output-file-name-stem>` - The output filename stem. Not the CMS framework will alter the name - but it will start with this.
+- `-o <output-file-name-stem>` - The output filename stem. Note the CMS framework will alter the name - but it will start with this.
 
 All arguments must be specified before the input filename.
 
