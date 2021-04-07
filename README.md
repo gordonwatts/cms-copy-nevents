@@ -1,5 +1,5 @@
-# copy-root-tree
- Copy the first 10 events from a CMS Run 1 DataFile into a new file.
+# cms-copy-nevents
+ Copy the first n=10 events from a CMS Run 1 AOD data file into a new file.
 
 ## Introduction
 
